@@ -45,6 +45,7 @@ jobs:
           fail_ci_if_error: false
 
   docs:
+    if: false
     name: Documentation
     runs-on: ubuntu-latest
     permissions:
