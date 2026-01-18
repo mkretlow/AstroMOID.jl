@@ -1,7 +1,6 @@
 # AstroMOID.jl
 
 [![Build Status](https://github.com/mkretlow/AstroMOID.jl/workflows/CI/badge.svg)](https://github.com/mkretlow/AstroMOID.jl/actions)
-[![Coverage](https://codecov.io/gh/mkretlow/AstroMOID.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/mkretlow/AstroMOID.jl)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Compute the Minimum Orbit Intersection Distance (MOID) for two given confocal, elliptical orbits.
