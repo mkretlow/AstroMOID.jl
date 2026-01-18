@@ -1,0 +1,19 @@
+name = "AstroMOID"
+uuid = "534c009d-3f74-45e2-88f7-ae4fc4afe031"
+desc = "Compute the Minimum Orbit Intersection Distances (MOID)"
+authors = ["Mike Kretlow <mike@kretlow.de>"]
+keywords = ["astronomy"]
+license = "MIT"
+version = "0.1.0"
+
+[deps]
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+
+[compat]
+julia = "1.6"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
