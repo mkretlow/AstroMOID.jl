@@ -105,7 +105,7 @@ function wisric_moid(saxisA, eccenA, argpeA, omegaA, incliA, saxisB, eccenB, arg
         dist_oo = 0
         dist_o = 1E6                # something big
         moid = 1E6                  # dito
-        tmpmoid = [1E6 for n=1:4]   # dito
+        tmpmoid[1:4] .= 1E6        # dito
 
 # Looking for the minima with rotating meridional plane
 # a) At first we calculate the coordinates of two additional positions of the plane to create first triplet
@@ -184,8 +184,11 @@ function wisric_moid(saxisA, eccenA, argpeA, omegaA, incliA, saxisB, eccenB, arg
     # END OF SCANNING
 
     # "WATER" PROCEDURE (can be skipped to increase computing speed)
-    water_procedure(nmax, argpeB, sintmpo, costmpo, sint, cost, tmptrueB, tmplongit, tmpmoid)
+    nmax = water_procedure(nmax, argpeB, sintmpo, costmpo, sint, cost, tmptrueB, tmplongit, tmpmoid)
 
+    restart = true
+    while restart
+    restart = false
     # START OF PARALLEL TUNING
     # After the scanning phase, we typically have a few minima on a meridional plane.
     # The goal of the tuning procedure is to move objects separately along their orbits
@@ -203,8 +206,9 @@ function wisric_moid(saxisA, eccenA, argpeA, omegaA, incliA, saxisB, eccenB, arg
             if (nmax == 2)
                 # in case of two minima are very close to each other(<1E-4 a.u.) go to "water procedure"
                 if (abs(tmpmoid[1] - tmpmoid[2]) < 1E-4)
-                    nmax = 1
-                    water_procedure(nmax, argpeB, sintmpo, costmpo, sint, cost, tmptrueB, tmplongit, tmpmoid)
+                    nmax = water_procedure(1, argpeB, sintmpo, costmpo, sint, cost, tmptrueB, tmplongit, tmpmoid)
+                    restart = true
+                    break
                 else
                     if (tmpmoid[1] < moid)
                         moid = tmpmoid[1]
@@ -351,6 +355,7 @@ function wisric_moid(saxisA, eccenA, argpeA, omegaA, incliA, saxisB, eccenB, arg
         end
     end
 
+    end # restart
     # END OF PARALLEL TUNING
     return sqrt(moid) # we dealed with squares
 end
@@ -375,5 +380,5 @@ function water_procedure(nmax, argpeB, sintmpo, costmpo, sint, cost, tmptrueB, t
             tmpmoid[iii] = 1E6 # something big
         end
     end
-    return nothing
+    return nmax
 end
