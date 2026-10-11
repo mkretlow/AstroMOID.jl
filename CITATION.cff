@@ -7,6 +7,14 @@ authors:
   - family-names: Kretlow
     given-names: Mike
 version: 0.1.2
+doi: 10.5281/zenodo.23304278
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23304278
+    description: "Concept DOI (all versions, resolves to the latest)"
+  - type: doi
+    value: 10.5281/zenodo.23304484
+    description: "DOI of version 0.1.2"
 date-released: 2026-10-11
 license: MIT
 repository-code: "https://github.com/mkretlow/AstroMOID.jl"

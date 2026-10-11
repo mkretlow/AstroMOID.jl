@@ -2,6 +2,7 @@
 
 [![Build Status](https://github.com/mkretlow/AstroMOID.jl/workflows/CI/badge.svg)](https://github.com/mkretlow/AstroMOID.jl/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23304278.svg)](https://doi.org/10.5281/zenodo.23304278)
 
 Compute the Minimum Orbit Intersection Distance (MOID) for two given confocal, elliptical orbits.
 It uses the idea of rotating meridional plane and calculates the MOIDs numerically.
@@ -47,5 +48,9 @@ wisric_moid(ceres...,urania...)
 
 # Output: 0.24521440655831886
 ```
+
+## Citation
+
+If you use AstroMOID.jl, please cite it via its Zenodo DOI [10.5281/zenodo.23304278](https://doi.org/10.5281/zenodo.23304278) (see also `CITATION.cff` or the "Cite this repository" button on GitHub), and the Wiśniowski & Rickman (2013) paper describing the method.
 
 ---
