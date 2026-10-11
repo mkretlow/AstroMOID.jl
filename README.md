@@ -30,14 +30,14 @@ Compute the MOID between asteroids (1) Ceres and (30) Urania. Argument values ar
 
 - semi-major axis (a in au)
 - eccentricity (e)
-- argument of perhielion (ω)
+- argument of perihelion (ω)
 - longitude of ascending node (Ω)
 - inclination (i) (all angles in rad)
 
 for both objects. Result of the `wisric_moid` function is the MOID in au.
 
 ```julia
-using MOID
+using AstroMOID
 
 rad = pi/180
 ceres = [2.7691652, 0.0760091, 73.59764*rad, 80.30553*rad, 10.59407*rad]
