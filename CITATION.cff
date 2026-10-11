@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. Please also cite the paper describing the method."
+type: software
+title: "AstroMOID.jl"
+abstract: "Compute the Minimum Orbit Intersection Distance (MOID) for two given confocal, elliptical orbits."
+authors:
+  - family-names: Kretlow
+    given-names: Mike
+version: 0.1.2
+date-released: 2026-10-11
+license: MIT
+repository-code: "https://github.com/mkretlow/AstroMOID.jl"
+keywords:
+  - astronomy
+  - MOID
+  - Julia
+references:
+  - type: article
+    title: "A Fast, Geometric Method for Calculating Accurate Minimum Orbit Intersection Distances (MOIDs)"
+    authors:
+      - family-names: Wiśniowski
+        given-names: T.
+      - family-names: Rickman
+        given-names: H.
+    journal: "Acta Astronomica"
+    volume: 63
+    start: 293
+    end: 307
+    year: 2013
