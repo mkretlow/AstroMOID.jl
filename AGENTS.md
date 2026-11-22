@@ -7,7 +7,7 @@ Registered in the General registry. It's a port of the Wiśniowski & Rickman (20
 - `src/wisric_moid.jl`: the whole algorithm, `wisric_moid(a,e,ω,Ω,i, a,e,ω,Ω,i)`, with angles in rad and the result in the units of `a`
 - `src/AstroMOID.jl`: module wrapper that exports `wisric_moid`
 - `test/runtests.jl`: asteroid pairs, plus regression cases compared against Fortran results (atol 1e-12 to 1e-14)
-- `references/`: the original Fortran source and the paper PDF (both tracked)
+- `references/`: the paper PDF; `refcode/`: the original Fortran source `moid_v4_fun.f` (both tracked)
 - `dev/`, `work/`, `todo/`, `paper/` (JOSS draft): local only, excluded through `.git/info/exclude`; never commit them
 
 ## Commands

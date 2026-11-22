@@ -9,7 +9,7 @@ It uses the idea of rotating meridional plane and calculates the MOIDs numerical
 
 The method is described in the paper:
 
-T.Wiśniowski and H.Rickman, "A Fast, Geometric Method for Calculating Accurate Minimum Orbit Intersection Distances (MOIDs)", Acta Astronomica, Vol. 63 (2013) pp. 293–307. The paper and the original Fortran source code are provided in the `references/` subdir.
+T.Wiśniowski and H.Rickman, "A Fast, Geometric Method for Calculating Accurate Minimum Orbit Intersection Distances (MOIDs)", Acta Astronomica, Vol. 63 (2013) pp. 293–307. The paper is provided in `references/`, the original Fortran source code in `refcode/`.
 
 
 ## Install
